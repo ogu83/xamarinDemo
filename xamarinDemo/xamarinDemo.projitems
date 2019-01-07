@@ -10,5 +10,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)xamarinDemo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LoginPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MenuPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StartPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ListViewPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomersPage.cs" />
   </ItemGroup>
 </Project>
