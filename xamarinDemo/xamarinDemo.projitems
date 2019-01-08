@@ -33,5 +33,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)imperial_march.mp3" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)star-wars-cantina-song.mp3" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)star-wars-theme-song.mp3" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)790012.png" />
   </ItemGroup>
 </Project>

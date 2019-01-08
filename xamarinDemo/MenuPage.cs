@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Reflection;
 using Xamarin.Forms;
 using xamarinDemo.ViewModels;
 
@@ -72,11 +73,31 @@ namespace xamarinDemo
                 SeparatorVisibility = SeparatorVisibility.None
             };
 
+            var image = new Image
+            {
+                Source = ImageSource.FromStream(()=> { 
+                    var assembly = typeof(App).GetTypeInfo().Assembly;
+                    var imgRes = ResourceLoader.GetEmbeddedResourceStream(assembly, "790012.png");
+                    return imgRes; 
+                })
+            };
+
+
             Title = "Menu";
+            /*
+            Icon = (FileImageSource)ImageSource.FromStream(() =>
+            {
+                var assembly = typeof(App).GetTypeInfo().Assembly;
+                var imgRes = ResourceLoader.GetEmbeddedResourceStream(assembly, "790012.png");
+                return imgRes; 
+            });
+            */
+
             Content = new StackLayout
             {
                 Children =
                 {
+                    image,
                     listView
                 }
             };

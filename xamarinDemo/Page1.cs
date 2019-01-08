@@ -23,15 +23,13 @@ namespace xamarinDemo
 
                 if (elem != null)
                 {
-                    if (elem.Title == "Logout")
+                    if (elem.TargetType == null)
                     {
                         Application.Current.MainPage = new NavigationPage(new LoginPage());
                     }
                     else
-                    {
-                        if (elem.TargetType != null)
-                            Detail = new NavigationPage((Page)Activator.CreateInstance(elem.TargetType));
-
+                    {                        
+                        Detail = new NavigationPage((Page)Activator.CreateInstance(elem.TargetType));
                         masterPage.ListView.SelectedItem = null;
                         IsPresented = false;
                     }
