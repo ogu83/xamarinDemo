@@ -34,7 +34,7 @@ namespace xamarinDemo
             {
                 Title = "Sound",
                 IconSource = "",
-                TargetType = null
+                TargetType = typeof(SoundsPage)
             });
             masterPageItems.Add(new MasterPageItem()
             {

@@ -20,8 +20,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ListViewItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MasterPageItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CustomerResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SoundsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SoundItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResourceLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)imperial_march.mp3" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)star-wars-cantina-song.mp3" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)star-wars-theme-song.mp3" />
   </ItemGroup>
 </Project>
