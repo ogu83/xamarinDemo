@@ -16,5 +16,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)StartPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ListViewPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomersPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ListViewItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MasterPageItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CustomerResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
   </ItemGroup>
 </Project>

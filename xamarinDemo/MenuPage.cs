@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Xamarin.Forms;
+using xamarinDemo.ViewModels;
 
 namespace xamarinDemo
 {

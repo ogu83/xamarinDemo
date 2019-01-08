@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using UIKit;
 using Xamarin.Forms;
+using xamarinDemo.ViewModels;
 
 namespace xamarinDemo
 {
     public class ListViewPage : ContentPage
     {
-        public List<ListViewItem> Items { get; set; }
+        public ObservableCollection<ListViewItem> Items { get; set; }
 
         public ListViewPage()
         {
-            Items = new List<ListViewItem>();
+            Items = new ObservableCollection<ListViewItem>();
 
             var header = new Label
             {
@@ -63,8 +63,12 @@ namespace xamarinDemo
                         if (e1.ButtonIndex == 0)
                         {
                             Items.Remove(elem);
-                            listView.ItemsSource = null;
-                            listView.ItemsSource = Items;
+                            foreach (var item in Items)
+                            {
+                                item.Index = Items.IndexOf(item) + 1;
+                            }
+                            //listView.ItemsSource = null;
+                            //listView.ItemsSource = Items;
                         }
                     };
                     alert.Show();
@@ -88,7 +92,7 @@ namespace xamarinDemo
                         var input = alert.GetTextField(0).Text;
                         Items.Add(new ListViewItem()
                         {
-                            Index = Items.Count,
+                            Index = Items.Count+1,
                             Name = input
                         });
                         listView.ItemsSource = null;

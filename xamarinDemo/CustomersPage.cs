@@ -1,5 +1,6 @@
 ﻿using System.Net.Http;
 using Xamarin.Forms;
+using xamarinDemo.ViewModels;
 
 namespace xamarinDemo
 {
