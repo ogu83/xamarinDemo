@@ -23,7 +23,7 @@ namespace xamarinDemo
                 Text = "+"
             };
 
-            var listView = new ListView()
+            var listView = new ListView
             {
                 ItemsSource = Items,
                 ItemTemplate = new DataTemplate(() =>
@@ -67,8 +67,6 @@ namespace xamarinDemo
                             {
                                 item.Index = Items.IndexOf(item) + 1;
                             }
-                            //listView.ItemsSource = null;
-                            //listView.ItemsSource = Items;
                         }
                     };
                     alert.Show();
