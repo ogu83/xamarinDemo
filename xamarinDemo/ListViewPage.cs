@@ -93,8 +93,6 @@ namespace xamarinDemo
                             Index = Items.Count+1,
                             Name = input
                         });
-                        listView.ItemsSource = null;
-                        listView.ItemsSource = Items;
                     }
                 };
                 alert.Show();

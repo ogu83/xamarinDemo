@@ -1,9 +1,24 @@
 ﻿using System;
 namespace xamarinDemo.ViewModels
 {
-    public class MasterPageItem
+    public class MasterPageItem: BaseModel
     {
-        public string Title { get; set; }
+        string title;
+        public string Title { 
+            get 
+            { 
+                return title; 
+            } 
+            set 
+            {
+                if (title != value)
+                {
+                    title = value;
+                    OnPropertyChanged(Title);
+                }
+            }
+        }
+
         public string IconSource { get; set; }
         public Type TargetType { get; set; }
     }

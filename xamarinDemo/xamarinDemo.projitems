@@ -23,6 +23,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)SoundsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SoundItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ResourceLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdminEntryPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdminPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />

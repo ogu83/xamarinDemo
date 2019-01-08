@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using xamarinDemo.ViewModels;
 
@@ -6,48 +6,52 @@ namespace xamarinDemo
 {
     public class MenuPage : ContentPage
     {
+        public static ObservableCollection<MasterPageItem> masterPageItems = new ObservableCollection<MasterPageItem>();
+
         public ListView ListView { get { return listView; } }
         ListView listView;
 
         public MenuPage()
-        {
-            var masterPageItems = new List<MasterPageItem>();
-            masterPageItems.Add(new MasterPageItem()
-            {
-                Title = "Startseite",
-                IconSource = "",
-                TargetType = typeof(StartPage)
-            });
-            masterPageItems.Add(new MasterPageItem()
-            {
-                Title = "ListView",
-                IconSource = "",
-                TargetType = typeof(ListViewPage)
-            });
-            masterPageItems.Add(new MasterPageItem()
-            {
-                Title = "Kunden",
-                IconSource = "",
-                TargetType = typeof(CustomersPage)
-            });
-            masterPageItems.Add(new MasterPageItem()
-            {
-                Title = "Sound",
-                IconSource = "",
-                TargetType = typeof(SoundsPage)
-            });
-            masterPageItems.Add(new MasterPageItem()
-            {
-                Title = "Admin",
-                IconSource = "",
-                TargetType = null
-            });
-            masterPageItems.Add(new MasterPageItem()
-            {
-                Title = "Logout",
-                IconSource = "",
-                TargetType = null
-            });
+        {          
+            if (masterPageItems.Count == 0)
+            {                           
+                masterPageItems.Add(new MasterPageItem()
+                {
+                    Title = "Startseite",
+                    IconSource = "",
+                    TargetType = typeof(StartPage)
+                });
+                masterPageItems.Add(new MasterPageItem()
+                {
+                    Title = "ListView",
+                    IconSource = "",
+                    TargetType = typeof(ListViewPage)
+                });
+                masterPageItems.Add(new MasterPageItem()
+                {
+                    Title = "Kunden",
+                    IconSource = "",
+                    TargetType = typeof(CustomersPage)
+                });
+                masterPageItems.Add(new MasterPageItem()
+                {
+                    Title = "Sound",
+                    IconSource = "",
+                    TargetType = typeof(SoundsPage)
+                });
+                masterPageItems.Add(new MasterPageItem()
+                {
+                    Title = "Admin",
+                    IconSource = "",
+                    TargetType = typeof(AdminEntryPage)
+                });
+                masterPageItems.Add(new MasterPageItem()
+                {
+                    Title = "Logout",
+                    IconSource = "",
+                    TargetType = null
+                });
+            }
 
             listView = new ListView()
             {
